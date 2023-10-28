@@ -1,0 +1,27 @@
+
+## list of keywords used to assess the availability 
+## of open data and/or open software code
+keywords <- c("reproducibility","replicability",
+              "reproducible","r markdown",
+              "code is available", "code used is available",
+              "code for the analysis is available", 
+              "code used for the analysis is available",
+              "codes are available", "codes used are available",
+              "codes for the analysis are available",
+              "codes used for the analysis are available",
+              "replication package", "replication bundle",
+              "replication material",
+              "replicable package", "replicable bundle",
+              "replicable material",
+              "code to replicate","codes to replicate", 
+              "code to reproduce","codes to reproduce", 
+              "code and data","codes and data", 
+              "data and code","data and codes", 
+              "code and documentation","codes and documentation",
+              "material to replicate","materials to replicate", 
+              "material to reproduce","materials to reproduce", 
+              "stata code","stata syntax file","matlab code",
+              "r code", "replicate the results",
+              "replicate the method","replicate the methods",
+              "reproduce the results",
+              "reproduce the method","reproduce the methods")
