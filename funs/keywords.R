@@ -12,7 +12,7 @@ keywords <- c("reproducibility","replicability",
               "replication package", "replication bundle",
               "replication material",
               "replicable package", "replicable bundle",
-              "replicable material",
+              "replicable material","fully replicable",
               "code to replicate","codes to replicate", 
               "code to reproduce","codes to reproduce", 
               "code and data","codes and data", 
@@ -20,8 +20,18 @@ keywords <- c("reproducibility","replicability",
               "code and documentation","codes and documentation",
               "material to replicate","materials to replicate", 
               "material to reproduce","materials to reproduce", 
-              "stata code","stata syntax file","matlab code",
-              "r code", "replicate the results",
+              "stata code","stata syntax file", "stata program",
+              "matlab code","matlab program",
+              "r code", "r program", 
+              "replicate the results",
               "replicate the method","replicate the methods",
               "reproduce the results",
               "reproduce the method","reproduce the methods")
+
+
+## NOTES:
+## 1. The word "replicable" is not included alone to avoid picking up sentences
+## such as "this experience/strategy/policy is replicable in other contexts"
+## 2. Data and codes are often provided in the Open Science Framework, Github or
+## Zenodo repositories. However, these repositories are sometimes included in 
+## the References, hence why they were not considered here

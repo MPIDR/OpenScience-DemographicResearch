@@ -23,6 +23,35 @@
 ##
 ## --------------------------------------------------------- ##
 
+##-----------------------------------------------------------##
+## IMPORTANT NOTE BEFORE STARTING THE ANALYSIS !!!
+## for some papers, a strange character is imported by pdftools.
+## this is unfortunately not rendered well by OSF, hence it 
+## is necessary to copy it manually in line 147
+## Here's how to visualise the strange character (a dot with a red space):
+## run all code until line 94, then use the following code (here commented)
+##
+# vol <- 13
+# setwd(inputDIR)
+# zipF <- dir()[vol]
+# unzip(zipF,exdir=tempDIR)
+# file_list <- list.files(path=tempDIR,pattern="*.pdf")
+# setwd(tempDIR)
+# all_files <- lapply(file_list, FUN = function(files) {
+#   pdftools::pdf_text(files)
+# })
+# paper <- all_files[12]
+# text <- tolower(unlist(paper))
+# text[10]
+##
+## looking at the printed word reproducibility (or any other word) 
+## in text[10] and copying it in Rstudio, it appears that there are 
+## some weird spaces, i.e. it is the word "repro­duc­ibil­ity"
+## ---> the strange charachter should be copied in line 147
+## Then, rerun everything from start
+##-----------------------------------------------------------##
+
+
 ## cleaning the workspace
 rm(list=ls(all=TRUE))
 
@@ -58,6 +87,8 @@ DF <- tibble(Year=rep(NA,n.vol),Volume=rep(NA,n.vol),
              Issue=rep(NA,n.vol),Articles=rep(NA,n.vol),
              OpenAccess=rep(NA,n.vol),OpenMaterials=rep(NA,n.vol),
              Journal=rep("Demography",n.vol))
+
+
 
 ## starting a for loop to analyse each volume separately
 vol <- 1
@@ -95,6 +126,7 @@ for (vol in 1:n.vol){
   DF.long.temp <- tibble(Year=rep(DF$Year[vol],n),Volume=rep(DF$Volume[vol],n),
                          Issue=rep(DF$Issue[vol],n),Article=rep(NA,n),
                          OpenAccess=rep(0,n),OpenMaterials=rep(0,n),
+                         OMpage=rep(NA,n),OMkeyword=rep(NA,n),
                          Journal=rep("Demography",n))
   
   ## vectors to store number of OA and OM in the issue (1 yes, 0 no)
@@ -110,8 +142,9 @@ for (vol in 1:n.vol){
     paper <- all_files[i]
     text <- tolower(unlist(paper))
     
-    ## transformed text to remove � character sometimes imported by pdftools
-    text2 <- gsub("�", "", tolower(unlist(paper)))
+    ## COPY HERE THE STRANGE CHARACTER!!!
+    ## transformed text to remove ­ character sometimes imported by pdftools
+    text2 <- gsub("­", "", tolower(unlist(paper)))
     
     ## find page with Open Access mention
     whi <- which(str_detect(text,paste("creative commons",collapse = '|')))
@@ -122,15 +155,24 @@ for (vol in 1:n.vol){
     } 
     
     ## find page with Open Materials mention
-    whi <- which(str_detect(text,paste(keywords,collapse = '|')))
-    whi2 <- which(str_detect(text2,paste(keywords,collapse = '|')))
+    whi <- which(str_detect(text,paste(paste0("\\b",keywords,"\\b"),collapse = '|')))
+    whi2 <- which(str_detect(text2,paste(paste0("\\b",keywords,"\\b"),collapse = '|')))
     if (length(whi)>0 | length(whi2)>0){
       open.materials[i] <- 1
       DF.long.temp$OpenMaterials[i] <- 1
+      DF.long.temp$OMpage[i] <- whi2[1]
+      ## extract specific keyword detected
+      for (j in 1:length(keywords)){
+        whi <- which(str_detect(text,paste0("\\b",keywords[j],"\\b")))
+        whi2 <- which(str_detect(text2,paste0("\\b",keywords[j],"\\b")))
+        if (length(whi)>0 | length(whi2)>0){
+          DF.long.temp$OMkeyword[i] <- keywords[j]
+          break
+        }
+      }
     }
-    
   }
-
+  
   ## combine long dataframe
   if (vol==1){
     DF.long <- DF.long.temp
