@@ -23,34 +23,6 @@
 ##
 ## --------------------------------------------------------- ##
 
-##-----------------------------------------------------------##
-## IMPORTANT NOTE BEFORE STARTING THE ANALYSIS !!!
-## for some papers, a strange character is imported by pdftools.
-## this is unfortunately not rendered well by OSF, hence it 
-## is necessary to copy it manually in line 147
-## Here's how to visualise the strange character (a dot with a red space):
-## run all code until line 94, then use the following code (here commented)
-##
-# vol <- 13
-# setwd(inputDIR)
-# zipF <- dir()[vol]
-# unzip(zipF,exdir=tempDIR)
-# file_list <- list.files(path=tempDIR,pattern="*.pdf")
-# setwd(tempDIR)
-# all_files <- lapply(file_list, FUN = function(files) {
-#   pdftools::pdf_text(files)
-# })
-# paper <- all_files[12]
-# text <- tolower(unlist(paper))
-# text[10]
-##
-## looking at the printed word reproducibility (or any other word) 
-## in text[10] and copying it in Rstudio, it appears that there are 
-## some weird spaces, i.e. it is the word "repro­duc­ibil­ity"
-## ---> the strange charachter should be copied in line 147
-## Then, rerun everything from start
-##-----------------------------------------------------------##
-
 
 ## cleaning the workspace
 rm(list=ls(all=TRUE))
@@ -130,7 +102,6 @@ for (vol in 1:n.vol){
     paper <- all_files[i]
     text <- tolower(unlist(paper))
     
-    ## COPY HERE THE STRANGE CHARACTER!!!
     ## transformed text to remove ­ character sometimes imported by pdftools
     text2 <- gsub("­", "", tolower(unlist(paper)))
     

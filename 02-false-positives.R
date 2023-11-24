@@ -41,6 +41,8 @@ load("Demography.Rdata")
 ##---- MANUAL CHECKING 1: extract two random issues from the three jorunals
 
 ## code to extract two random issues (based on sample function) removed
+## but Volume 58, Issue 4 (2021) [included here] was randomly picked,
+## hence the following adjustment
 
 ## adjust dataframe for 1 false negative
 falseneg_pap <- c("1525feehan.pdf")
