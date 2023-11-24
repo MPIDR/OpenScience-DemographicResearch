@@ -9,6 +9,7 @@ keywords <- c("reproducibility","replicability",
               "codes are available", "codes used are available",
               "codes for the analysis are available",
               "codes used for the analysis are available",
+              "code can be obtained","codes can be obtained",
               "replication package", "replication bundle",
               "replication material",
               "replicable package", "replicable bundle",
@@ -22,7 +23,7 @@ keywords <- c("reproducibility","replicability",
               "material to reproduce","materials to reproduce", 
               "stata code","stata syntax file", "stata program",
               "matlab code","matlab program",
-              "r code", "r program", "r script",
+              "r code", "r program","r script",
               "replicate the results",
               "replicate the method","replicate the methods",
               "reproduce the results",
@@ -35,3 +36,7 @@ keywords <- c("reproducibility","replicability",
 ## 2. Data and codes are often provided in the Open Science Framework, Github or
 ## Zenodo repositories. However, these repositories are sometimes included in 
 ## the References, hence why they were not considered here
+
+## list of keywords used to check if the availability 
+## of open data and/or open software code is upon request
+keywordsREQUEST <- c("on request","upon request")

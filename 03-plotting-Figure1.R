@@ -39,13 +39,18 @@ outDIR <- paste0(getwd(),"/output")
 ## read Demographic Research data (scraped from website) 
 setwd(demresDIR)
 load("DemographicResearch.Rdata")
-DFall <- DF
+DFdr <- DF
 
 ## read Demography data (from text search) 
 setwd(demographyDIR)
-load("Demography.Rdata")
-DFall <- DFall %>% 
-  bind_rows(DF)
+load("Demography-cleaned.Rdata")
+DFdem <- DF.long %>% 
+  group_by(Year,Journal) %>% 
+  summarise(Articles=n(),OpenAccess=sum(OpenAccess),
+            OpenMaterials=sum(OpenMaterials))
+
+DFall <- DFdr %>% 
+  bind_rows(DFdem)
 
 
 ##----- Figure 1 plot -----
