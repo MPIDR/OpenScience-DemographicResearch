@@ -1,8 +1,7 @@
 
 ## --------------------------------------------------------- ##
 ##
-##  FILE 02: partially reproduce Figure 1 of the manuscript
-##  (only for all sharable Open Access publications) 
+##  FILE 02: adjust false positives and false negatives 
 ##
 ##  sessionInfo() details:
 ##

@@ -2,7 +2,7 @@
 ## --------------------------------------------------------- ##
 ##
 ##  FILE 01: estimate share of articles with Open Access and 
-##  Open Study Materials in relevant publications of Demography  
+##  open software in relevant publications of Demography  
 ##  during the years 2021-2023 (all sharable Open Access publications) 
 ##
 ##  sessionInfo() details:

@@ -1,9 +1,9 @@
 
 ## --------------------------------------------------------- ##
 ##
-##  FILE 04: estimate share of articles with  Open Spftware
+##  FILE 04: estimate share of articles with open software
 ##  in relevant publications of Demographic Research
-##  during the years 2021-2023 (all sharable Open Access publications) 
+##  during the years 2010-2023 (all sharable Open Access publications) 
 ##
 ##  sessionInfo() details:
 ##

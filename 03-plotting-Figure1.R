@@ -1,7 +1,7 @@
 
 ## --------------------------------------------------------- ##
 ##
-##  FILE 02: partially reproduce Figure 1 of the manuscript
+##  FILE 03: partially reproduce Figure 1 of the manuscript
 ##  (only for all sharable Open Access publications) 
 ##
 ##  sessionInfo() details:
