@@ -2,7 +2,7 @@
 
 This repository contains materials to partially reproduce the results of the paper: "Open science practices in demographic research: an appraisal". 
 
-Only open-access publications from *Demography* starting in 2021 were included. Non Open Access publications were not included due to copyrights. The analysis can be replicated, for example, on all publications of *Demographic Research* (all Open Access) by downloading the volumes of interest from [this link](https://www.demographic-research.org/articles/volumes) (not included in this repository due to large file size).
+Only open-access publications from *Demography* (from 2021) and *Demographic Research* (from 2010) were included. Non-Open Access publications were not included due to copyrights. The analysis can be replicated on other journals by downloading all volumes and issues (if possible) of interest.
 
 
 ### Structure

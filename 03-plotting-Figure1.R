@@ -32,13 +32,13 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 library(tidyverse)
 
 ## directories
-demresDIR <- paste0(getwd(),"/data/input/DemographicResearch")
+demresDIR <- paste0(getwd(),"/data/input")
 demographyDIR <- paste0(getwd(),"/data/output")
 outDIR <- paste0(getwd(),"/output")
 
 ## read Demographic Research data (scraped from website) 
 setwd(demresDIR)
-load("DemographicResearch.Rdata")
+load("DemographicResearch-Website.Rdata")
 DFdr <- DF
 
 ## read Demography data (from text search) 
