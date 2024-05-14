@@ -1,8 +1,13 @@
 # Open science practices in demographic research: an appraisal
 
-This repository contains materials to partially reproduce the results of the paper: "Open science practices in demographic research: an appraisal". 
+This repository contains materials to partially reproduce the results of the paper: 
 
-Only open-access publications from *Demography* (from 2021) and *Demographic Research* (from 2010) were included. Non-Open Access publications were not included due to copyrights. The analysis can be replicated on other journals by downloading all volumes and issues (if possible) of interest.
+Basellini, U. (2024). Open science practices in demographic research: an appraisal. Forthcoming in *Demographic Research*. Preprint available on [SocArXiv](https://osf.io/preprints/socarxiv/vrcdh ): 
+
+
+## General information
+
+In this repository, only open-access publications from *Demography* (from 2021) and *Demographic Research* (from 2010) were included. Non-Open Access publications were not included due to copyrights. The analysis can be replicated on other journals by downloading all volumes and issues (if possible) of interest. However, the file "03-combined-cleaned.Rdata" contains the text search results for all 2926 papers analysed in this article.
 
 
 ### Structure
