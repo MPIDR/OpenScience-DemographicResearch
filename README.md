@@ -2,7 +2,7 @@
 
 This repository contains materials to partially reproduce the results of the paper: 
 
-Basellini, U. (2024). Open science practices in demographic research: an appraisal. Forthcoming in *Demographic Research*. Preprint available on [SocArXiv](https://osf.io/preprints/socarxiv/vrcdh )
+Basellini, U. (2024). Open science practices in demographic research: an appraisal. *Demographic Research*, 50(43), 1265–1280. Openly available at this [web-link](https://www.demographic-research.org/articles/volume/50/43/)
 
 
 ## General information
